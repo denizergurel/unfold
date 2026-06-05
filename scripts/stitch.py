@@ -193,32 +193,29 @@ def resolve_durations(n_slides: int, total: float, timing: Path):
 
 
 def build_video(frames, durations, audio: Path, out: Path):
-    """Build an ffmpeg concat of still frames, then mux the narration."""
-    with tempfile.TemporaryDirectory() as td:
-        concat = Path(td) / "concat.txt"
-        lines = []
-        for frame, dur in zip(frames, durations):
-            lines.append(f"file '{frame.resolve()}'")
-            lines.append(f"duration {dur}")
-        # ffmpeg concat demuxer needs the last frame repeated w/o duration
-        lines.append(f"file '{frames[-1].resolve()}'")
-        concat.write_text("\n".join(lines))
-
-        silent = Path(td) / "silent.mp4"
-        run_ffmpeg(
-            [
-                "ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(concat),
-                "-fps_mode", "vfr", "-pix_fmt", "yuv420p", str(silent),
-            ],
-            what="ffmpeg concat (slides -> silent.mp4)",
-        )
-        run_ffmpeg(
-            [
-                "ffmpeg", "-y", "-i", str(silent), "-i", str(audio),
-                "-c:v", "copy", "-c:a", "aac", "-shortest", str(out),
-            ],
-            what="ffmpeg mux (silent + narration -> output)",
-        )
+    """Encode the slideshow in a single ffmpeg invocation: each slide is loaded
+    as a still input with its own -t duration, chained through the concat
+    *filter*, and muxed with the narration. The concat *demuxer* (which the
+    previous version used) silently drops the last slide's duration when its
+    filename matches the trailing sentinel line — a quirk that's easy to hit
+    and produces output that *looks* right until you check packet timings."""
+    inputs = []
+    for frame, dur in zip(frames, durations):
+        inputs += ["-loop", "1", "-t", str(dur), "-i", str(frame)]
+    inputs += ["-i", str(audio)]
+    n = len(frames)
+    concat_chain = "".join(f"[{i}:v]" for i in range(n))
+    filter_complex = f"{concat_chain}concat=n={n}:v=1:a=0,format=yuv420p[v]"
+    run_ffmpeg(
+        [
+            "ffmpeg", "-y", *inputs,
+            "-filter_complex", filter_complex,
+            "-map", "[v]", "-map", f"{n}:a",
+            "-c:v", "libx264", "-tune", "stillimage", "-preset", "veryfast",
+            "-c:a", "aac", "-shortest", str(out),
+        ],
+        what="ffmpeg encode + mux (concat filter + narration -> output)",
+    )
 
 
 def main():

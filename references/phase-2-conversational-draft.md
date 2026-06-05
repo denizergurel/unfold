@@ -41,7 +41,9 @@ Produce a slide-by-slide outline, not finished slides. For each slide:
 - A rough note on what the narration says here
 
 Keep it to the spine of the story. Resist detail — detail gets cut in Phase 4
-anyway. Once the outline is agreed, render it into the designed HTML slides
+anyway. Slide count tracks the shape chosen above: don't force a chronological
+arc into 5 slides, and don't pad a thematic version to 15. The skeleton in
+`assets/script-skeleton-template.md` provides scaffolds for both. Once the outline is agreed, render it into the designed HTML slides
 described above. Capture the per-slide narration in
 `assets/script-skeleton-template.md` as you go — one idea, one visual, rough
 narration per slide.
@@ -53,12 +55,27 @@ is the strongest beat buried?" "Which of these slides is doing real work and
 which is filler?" Revise conversationally. Repeat until the skeleton feels
 right to the user.
 
-## A note on narrative shape
+## Two narrative shapes — name both, let the user pick
 
-A portfolio you watch is a *story*, not an org chart of accomplishments. Look
-for an arc: a through-line that connects the pivotal moments rather than a flat
-list. The brain-dump from Phase 1 usually contains the arc already — find it
-there.
+A portfolio you watch is a *story*, not an org chart of accomplishments. The
+brain-dump from Phase 1 usually contains the shape already; the job is to spot
+which one fits. Two reliable patterns:
+
+- **Chronological arc.** Walk the career in order — a hook + current role
+  first, then origin → roles → products → now → what's next. Reliable when
+  the person has many visible roles or products and the arc itself (how the
+  work compounded) is the argument. Expect **12–20 slides**, one per
+  meaningful beat. Jaclyn Konzelmann's original 5:20 video that inspired this
+  skill is this shape.
+- **Thematic greatest-hits.** Pick **3–5 pivotal moments** that each
+  demonstrate judgment or taste, ordered for impact (not necessarily
+  chronological). Works when the person is earlier-career, the role list is
+  short, or one specific beat is the strongest argument and the rest support
+  it. Expect **5–8 slides**.
+
+Don't pick the shape *for* the user — surface both, name what each is good
+for, let them decide. Either way, the through-line motif from Phase 1 stitches
+the beats into a story instead of a sequence of items.
 
 ## Output of this phase
 

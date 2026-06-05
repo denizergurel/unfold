@@ -2,8 +2,10 @@
 
 This is the phase that makes or breaks the artifact, and the one people resist
 most. The art of writing is thrift. A natural, heartfelt brain-dump runs
-10–15 minutes. The target is roughly **3–5 minutes**. That gap is closed only by
-deliberate, repeated cutting.
+10–15 minutes. The target is roughly **3–7 minutes** — lean to the longer end
+when the career has many distinct beats worth showing (the reference video
+that inspired this skill runs 5:20), shorter when the story rests on a few
+pivotal moments. That gap is closed only by deliberate, repeated cutting.
 
 ## Expect to cut more than once
 
@@ -39,6 +41,17 @@ Read the script aloud (or have the user do it) and time it. Repeat the cut →
 time → cut loop until it lands in the target window and still feels true to the
 work. "Concise enough to hold attention, thorough enough to be honest" is the
 bar.
+
+## The close earns the ask
+
+The final beat does work the rest can't — it converts the story into "and
+therefore". If Phase 1 captured a specific target audience or role, land on
+"why I'm a fit for that" with concrete language. The reference video closes
+with the explicit pitch: *"above all, exceptional product taste and high
+agency… and I want to do it with a great team."* If the artifact is general,
+land on the person's worldview — what they want to keep building and why.
+Either way, the close is the one beat that *asks* for something; cutting it
+generic wastes the strongest position in the runtime.
 
 ## Output of this phase
 

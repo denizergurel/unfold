@@ -24,6 +24,21 @@ stuff — explicitly ask for it.
    that a resume strips out. If they hand you only polished documents, push for
    this.
 
+## Two framing questions the rest of the workflow leans on
+
+Surface answers to two short questions during intake. They shape Phase 2's
+structure and Phase 4's close, so getting them early prevents rework:
+
+1. **Who is this artifact pitching to?** A specific role, team, or audience —
+   or a general "this is who I am" piece? A specific target sharpens the
+   closing beat ("why I'm a fit for X"); a general one lands on the person's
+   worldview. Either is valid; the choice changes the shape of the close.
+2. **What's the through-line?** Listen to the brain-dump for a recurring
+   phrase, motif, or angle the person returns to unprompted — e.g.
+   "zero to one, then scaling," "ship and learn," "taste under pressure."
+   If one surfaces, name it. It becomes the thread that ties otherwise
+   separate beats into a story rather than a list.
+
 ## Why the brain-dump matters most
 
 Polished documents are already flattened. The brain-dump is where the texture

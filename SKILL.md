@@ -67,6 +67,11 @@ The brain-dump matters more than the polished documents. It carries the voice
 and the texture that bullets strip out. Prompt the user for it explicitly; don't
 let them hand you only the clean stuff.
 
+Also surface two framing questions early: **who is this artifact pitching to**
+(a specific role, or a general "this is who I am") and **what through-line
+motif** keeps surfacing in their own words (a recurring phrase or angle —
+"zero to one then scale", "ship and learn"). Both shape later phases.
+
 → Read `references/phase-1-inputs.md` for the full intake checklist. Copy
 `assets/artifact-intake-template.md` into the user's working directory (or paste
 its contents into the conversation) so they have a concrete place to gather
@@ -78,6 +83,11 @@ Draft the presentation *conversationally*. Do not ask the user to hand-edit
 slides. Iterate on structure and format by discussing it, modeling the look on
 the person's own brand or personal site so it feels authentically theirs — not
 a generic template.
+
+Two narrative shapes work: a **chronological arc** (walk the career in order,
+12–20 slides — Jaclyn Konzelmann's reference video uses this) and a
+**thematic** version (3–5 pivotal moments, 5–8 slides). Surface both, name
+what each is good for, let the user pick — don't pick the shape for them.
 
 Once the outline is agreed, produce **real designed HTML slides** — and if a
 frontend/design capability is available, orchestrate it: invoke the agent's
@@ -106,10 +116,13 @@ decorative that's standing in for real proof of work.
 ### Phase 4 — Ruthless edit: cut to only what matters
 
 Assume the first script is far too long — a natural brain-dump runs 10–15
-minutes against a 3–5 minute target. The art here is thrift. Cut entire
-sections, not just words. Keep only the pivotal moments that demonstrate
-judgment. Expect to repeat the cut several times; the first draft is never the
-final draft.
+minutes against a **3–7 minute** target (lean longer when the career has many
+beats worth showing, shorter when a few pivotal moments carry the story). The
+art here is thrift. Cut entire sections, not just words. Keep only the
+pivotal moments that demonstrate judgment. The closing beat should land on a
+specific fit for the target audience from Phase 1 — don't let it drift
+generic; it's the one beat that *asks* for something. Expect to repeat the
+cut several times; the first draft is never the final draft.
 
 → Read `references/phase-4-ruthless-edit.md`. The cut checklist lives there; use
 the cut log in `assets/script-skeleton-template.md` to track what you remove and
