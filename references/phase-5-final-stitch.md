@@ -15,7 +15,19 @@ without redoing anything upstream.
    to sort in order (`01_…`, `02_…`). PNG/JPG exports also work (leaner look).
 2. **Narration audio** — the user records their script in their own voice.
    unfold does **not** synthesize a voice; the real voice keeps the authenticity
-   principle intact. Save it as e.g. `narration.wav`.
+   principle intact. Save it as e.g. `narration.wav` or `narration.m4a`
+   (ffmpeg accepts both — no conversion needed).
+
+   Many users won't already know how to record audio. Give them
+   platform-appropriate steps, don't just ask for "a narration file":
+   - **macOS**: QuickTime Player → File → New Audio Recording → red button →
+     read → stop → File → Save.
+   - **Windows**: built-in **Voice Recorder** app → record → save.
+   - **Linux**: any audio recorder (Audacity is the common pick).
+
+   Also tell them: do a couple of read-throughs before the take they keep —
+   first takes are usually nervous, second or third are where their real
+   voice comes through. That's the asset the whole skill exists to capture.
 3. **Timing** (optional) — seconds per slide as a JSON list, e.g. `[8,14,12,10,9]`,
    derived from the Phase 4 cut. Without it, the audio is split evenly.
 

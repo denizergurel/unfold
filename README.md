@@ -57,7 +57,106 @@ Built for real careers: if some of your best work is under NDA, `unfold` helps
 you show the *thinking* behind it without leaking the work — public proxies,
 redacted views, or honestly "described, not shown" slides.
 
-## Install
+## First-time setup (about 10 minutes, no Terminal experience needed)
+
+If you've never opened Terminal before — that's fine. This walks through every
+command. Copy a line, paste it into Terminal, press Enter, and wait for the
+blinking cursor to come back before doing the next one.
+
+These instructions are for **macOS**. Windows / Linux equivalents are at the
+end.
+
+### 1 · Install Claude Code
+
+unfold runs inside an AI agent. The simplest one is **Claude Code** by
+Anthropic.
+
+→ Download it from **https://claude.com/download** and install like any Mac
+app. Sign in with an Anthropic account (Google login works). Free for personal
+use up to a generous daily limit.
+
+### 2 · Open Terminal
+
+Press **⌘ + Space**, type **Terminal**, hit Enter. A small window with a
+blinking cursor appears — that's where you paste each command below.
+
+### 3 · Paste each line into Terminal, one at a time
+
+Install Homebrew (Mac's tool installer — it'll ask for the password you use to
+log into your Mac):
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Install ffmpeg (the video tool), Python, and git:
+
+```bash
+brew install ffmpeg python git
+```
+
+Install Playwright + Chromium (the silent browser that screenshots your
+designed slides into video frames):
+
+```bash
+python3 -m pip install --break-system-packages playwright
+python3 -m playwright install chromium
+```
+
+(`--break-system-packages` looks alarming but is just permission to install
+this one library into the Python you just installed. It's safe — a one-off,
+no conflicts with anything else.)
+
+Install the unfold skill itself:
+
+```bash
+git clone https://github.com/denizergurel/unfold ~/.claude/skills/unfold
+```
+
+### 4 · Restart Claude Code and try it
+
+Quit Claude Code if it's open, then reopen it. Start a new conversation and
+paste:
+
+> I want to make a short video portfolio of my work — something people can
+> watch instead of read.
+
+Claude Code should pick up unfold and start asking about your materials.
+That's the signal it's working. If it doesn't, type `/skills` in the prompt
+and confirm `unfold` is in the list — if it is, just tell the agent
+"use the unfold skill" and you're off.
+
+### Recording your own narration
+
+About halfway through, the agent will give you a final script and ask you to
+record yourself reading it. On Mac, the easiest way:
+
+1. Open **QuickTime Player** (in your Applications folder)
+2. **File → New Audio Recording** → click the red record button → read your
+   script → click stop
+3. **File → Save**, name it `narration`, save it to your Desktop (or wherever
+   you'll find it)
+
+You'll get a file called `narration.m4a`. Hand that to the agent — it knows
+what to do next.
+
+A tip: do a couple of read-throughs before recording. First takes are
+usually a little nervous; second or third takes are where you sound like
+yourself.
+
+### Windows and Linux
+
+Same shape, just different installers:
+
+- **Windows**: use [Chocolatey](https://chocolatey.org/install) instead of
+  Homebrew (`choco install ffmpeg python git`). For narration, the built-in
+  **Voice Recorder** app works.
+- **Linux**: `sudo apt install ffmpeg python3 python3-pip git` on Debian /
+  Ubuntu, or the equivalent for your distro. Any audio recorder is fine.
+
+The rest of the steps (`pip install`, `git clone`, etc.) are identical.
+
+## Install (already comfortable with terminal)
 
 `unfold` follows the portable `SKILL.md` standard, so it drops into any
 compatible agent. Pick your tool:
