@@ -101,7 +101,7 @@ Once installed, just describe the goal — no special command needed:
 > "Help me build a video portfolio of my work."
 
 The agent picks up `unfold` and walks you through the five phases, ending with a
-render-ready handoff package.
+finished narrated video.
 
 ## Structure
 
